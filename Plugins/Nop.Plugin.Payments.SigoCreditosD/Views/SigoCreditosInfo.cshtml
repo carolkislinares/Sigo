@@ -1,0 +1,89 @@
+﻿@{
+    Layout = "";
+}
+@model Nop.Plugin.Payments.SigoCreditos.Models.PaymentInfoModel
+
+<div class="page account-page customer-info-page">
+    <div class="page-body">
+        <form asp-route="CustomerInfo" method="post">
+            <div asp-validation-summary="ModelOnly" class="message-error"></div>
+            <div class="fieldset">
+                <div class="title">
+                    <strong>@T("Account.YourPersonalDetails")</strong>
+                </div>
+                <div class="form-fields">
+                    <div class="inputs">
+                        <label asp-for="FirstName" asp-postfix=":"></label>
+                        <input asp-for="FirstName" />
+                        <nop-required />
+                        <span asp-validation-for="FirstName"></span>
+                    </div>
+                    <div class="inputs">
+                        <label asp-for="LastName" asp-postfix=":"></label>
+                        <input asp-for="LastName" />
+                        <nop-required />
+                        <span asp-validation-for="LastName"></span>
+                    </div>
+                    <div class="inputs">
+                        <label asp-for="Email" asp-postfix=":"></label>
+                        <input asp-for="Email" />
+                        <nop-required />
+                        <span asp-validation-for="Email"></span>
+                    </div>
+                </div>
+            </div>
+            @*<div class="buttons">
+                <input type="submit" id="save-info-button" value="@T("Common.Save")" name="save-info-button" class="button-1 save-customer-info-button" />
+            </div>*@
+        </form>
+    </div>
+</div>
+
+
+@*<table width="100%" cellspacing="2" cellpadding="1" border="0">
+        <tr>
+            <td>
+                <label asp-for="CreditCardTypes">@T("Payment.SelectCreditCard"):</label>
+            </td>
+            <td>
+                <select asp-for="CreditCardType" asp-items="Model.CreditCardTypes" class="dropdownlists"></select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="CardholderName">@T("Payment.CardholderName"):</label>
+            </td>
+            <td>
+                <input type="text" asp-for="CardholderName" style="width:165px;" autocomplete="off" />
+                <span asp-validation-for="CardholderName"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="CardNumber">@T("Payment.CardNumber"):</label>
+            </td>
+            <td>
+                <input type="text" asp-for="CardNumber" style="width:165px;" autocomplete="off" maxlength="22" />
+                <span asp-validation-for="CardNumber"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="ExpireMonth">@T("Payment.ExpirationDate"):</label>
+            </td>
+            <td>
+                <select asp-for="ExpireMonth" asp-items="Model.ExpireMonths"></select>
+                /
+                <select asp-for="ExpireYear" asp-items="Model.ExpireYears"></select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label asp-for="CardCode">@T("Payment.CardCode"):</label>
+            </td>
+            <td>
+                <input type="text" asp-for="CardCode" style="width:60px;" autocomplete="off" maxlength="4" />
+                <span asp-validation-for="CardCode"></span>
+            </td>
+        </tr>
+    </table>*@
